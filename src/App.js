@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { Fragment, useState } from "react";
+import Header  from "./compnents/Layout/Header";
+import { CartBox,CartBoxSticky, ShopingBagBox, ItemCount, DollorCount } from "./compnents/Layout/Header.style";
+import shopingBag from './assets/shoping_bag.jpg'
+import Products from "./compnents/Products/Products";
+import Cart from "./compnents/Cart/Cart";
+import CartProvider from "./store/CartProvider";
 
 function App() {
+
+  const [cartIsShown, setCartIsShown] = useState(false);
+
+  const showCartHandler = () => {
+    setCartIsShown(true);
+  }
+
+  const hideCartHandler = () => {
+    setCartIsShown(false);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CartProvider>
+      {cartIsShown && <Cart onClose={hideCartHandler} /> }
+      <Header onShowCart={showCartHandler}/>
+      <CartBox>
+        <CartBoxSticky>
+          <ItemCount>
+            1 ITEM
+          </ItemCount>
+
+          <DollorCount>
+            $ 150
+            </DollorCount>
+        </CartBoxSticky>
+      </CartBox>
+      <Products />
+    </CartProvider>
   );
 }
 
