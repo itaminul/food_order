@@ -23,7 +23,7 @@ console.log(portalElement)
         renderBackdrop={renderBackdrop}
       >
         <div>
-          <h4 id="modal-label">Text in a modal</h4>
+          <h4 id="modal-label">SHOPPING CART</h4>
           <p>{props.children}</p>
         </div>
       </AModal>

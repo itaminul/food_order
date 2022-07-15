@@ -2,6 +2,7 @@ import Modal from "../UI/Modal";
 import CartContext from "../../store/cart-context";
 import { useContext } from "react";
 import CartItem from "./CartItem";
+import { CardWra, CartTotalAmont, CartButton } from "../UI/Card.style";
 const Cart = (props) => {
     const cartCtx = useContext(CartContext);
     const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
@@ -27,16 +28,19 @@ const Cart = (props) => {
         </ul>
     )
     return(
+
         <Modal onClose={props.onClose}>
+            <CardWra>
             {cartItems}
-            <div>
-                <span>Total Amount</span>
+            <CartTotalAmont>
+                <span>Total Amount </span>
                 <span>{totalAmount}</span>
-            </div>
-            <div>
+            </CartTotalAmont>
+            <CartButton>
                 <button onClick={props.onClose}>Close</button>
                 {hasItem && <button>Order</button>}
-            </div>
+            </CartButton>
+            </CardWra>
         </Modal>
         
     )
