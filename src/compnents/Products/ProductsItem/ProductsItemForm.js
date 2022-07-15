@@ -7,7 +7,7 @@ const ProductsItemForm = (props) => {
        const amountInputRef = useRef();
 
 
-        const submitHandler = (event) => {
+        const submitHandler = event => {
             event.preventDefault();
 
             const enteredAmount = amountInputRef.current.value;
