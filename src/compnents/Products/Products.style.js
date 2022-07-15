@@ -21,15 +21,23 @@ export const ProductsSummaryContent = styled.div`
   border-radius: 10px;
   cursor: pointer;
   font-weight: 300;
-  margin-top: 280px; 
+  margin-top: 50px; 
   margin-left: 290px;
   background: white;
   font-size: 15px;
   width: 50%;
   height: 30%;
 `
+export const ProductsWrapper = styled.div`
+width: 100%;
+
+`
+
 export const AvailableProductsDetails = styled.div`
-  margin-top: 150px; 
-  margin-left: 100px;
-  width: 50%;
+width: 30%;
+margin-left: 30%;
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
 `

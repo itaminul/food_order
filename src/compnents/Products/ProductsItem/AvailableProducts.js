@@ -5,38 +5,32 @@ import { CardWra } from "../../UI/Card.style";
 const DUMMY_PRODUCTS = [
     {
         id: 'P1',
-        name : 'Mobile',
-        description : 'ddd',
+        name : 'Samsung Mobile',
         price: 100
     },
     {
         id: 'P2',
-        name : 'Samsung',
-        description : 'ddd',
+        name : 'Telivision',
         price: 200
     },
     {
         id: 'P3',
-        name : 'Computer',
-        description : 'ddd',
+        name : 'Freeze',
         price: 400
     },
     {
         id: 'P4',
         name : 'Head Phone',
-        description : 'ddd',
         price: 500
     },
     {
         id: 'P5',
-        name : 'Mobile',
-        description : 'ddd',
+        name : 'Busket',
         price: 600
     },
     {
         id: 'P6',
-        name : 'Mobile',
-        description : 'ddd',
+        name : 'Kooking',
         price: 700
     },
 ];
@@ -50,9 +44,9 @@ const AvailableProducts = () => {
         />)
     return (
         <CardWra>
-        <ul>
-            {productsList}
-        </ul>
+            <ul>
+                {productsList}
+            </ul>
         </CardWra>
 
     );

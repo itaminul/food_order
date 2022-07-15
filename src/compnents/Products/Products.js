@@ -1,10 +1,10 @@
 import React, { Fragment} from "react";
 import ProductsSummary from "./ProductsSummary";
 import AvailableProducts from "./ProductsItem/AvailableProducts";
-import { ProductsSummaryContent, CardWrapper, AvailableProductsDetails } from "./Products.style";
+import { ProductsSummaryContent, AvailableProductsDetails } from "./Products.style";
 const Products = () => {
     return(
-        <Fragment>
+        <Fragment>         
           
             <ProductsSummaryContent>
               <ProductsSummary />

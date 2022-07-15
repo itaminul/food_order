@@ -18,7 +18,7 @@ z-index: 10;
 
 
 export const CartBox = styled.div`
-top: 0;
+  top: 0;
   background-color: yellow;
   padding: 50px;
   font-size: 20px;
@@ -46,6 +46,7 @@ export const ItemCount = styled.div`
   font-size: 16px;
   width: 150px;
   margin-top: 4px;
+  color: yellow;
 `
 export const DollorCount = styled.div`
   font-size: 16px;

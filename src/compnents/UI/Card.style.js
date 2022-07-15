@@ -2,8 +2,7 @@ import styled from 'styled-components'
 
 export const CardWra = styled.div`
 list-style-type: none;
-width: 500px;
-margin-left: 0px;
+margin-top: 60px;
 `
 
 export const CartTotalAmont = styled.div`

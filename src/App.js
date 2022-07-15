@@ -1,39 +1,18 @@
-import { Fragment, useState } from "react";
-import Header  from "./compnents/Layout/Header";
-import { CartBox,CartBoxSticky, ShopingBagBox, ItemCount, DollorCount } from "./compnents/Layout/Header.style";
-import shopingBag from './assets/shoping_bag.jpg'
-import Products from "./compnents/Products/Products";
-import Cart from "./compnents/Cart/Cart";
-import CartProvider from "./store/CartProvider";
+import { Wrapper } from "./App.style";
+import TopNav from "./compnents/Template/TopNav";
+import LeftSideBar from "./compnents/Template/LeftSideBar";
+import Footer from "./compnents/Template/Footer";
 
+import { TopNavBarContainer } from "./compnents/Template/TopNav.style";
+import { LeftSideBarContainer } from "./compnents/Template/LeftSideBar.style";
+import { FooterContainer } from "./compnents/Template/Footer.syle";
+import GlobalStyles from "./GlobalStyles.styles";
 function App() {
-
-  const [cartIsShown, setCartIsShown] = useState(false);
-
-  const showCartHandler = () => {
-    setCartIsShown(true);
-  }
-
-  const hideCartHandler = () => {
-    setCartIsShown(false);
-  }
   return (
-    <CartProvider>
-      {cartIsShown && <Cart onClose={hideCartHandler} /> }
-      <Header onShowCart={showCartHandler}/>
-      <CartBox>
-        <CartBoxSticky>
-          <ItemCount>
-            1 ITEM
-          </ItemCount>
-
-          <DollorCount>
-            $ 150
-            </DollorCount>
-        </CartBoxSticky>
-      </CartBox>
-      <Products />
-    </CartProvider>
+    <Wrapper>
+      <GlobalStyles/>
+         <TopNav />
+    </Wrapper>
   );
 }
 

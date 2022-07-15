@@ -1,5 +1,5 @@
 import React, { useContext} from "react";
-import {} from './ProductsItem.style'
+import {ProductsCard} from './ProductsItem.style'
 import ProductsItemForm from "./ProductsItemForm";
 import { AddTocartButton } from "./ProductsItemForm.style";
 import CartContext from "../../../store/cart-context";
@@ -16,17 +16,18 @@ const ProductsItem = (props) => {
 
     };
     return(
+        <ProductsCard>
         
         <li style={{listStyleType: "none",  borderBottom: "1px solid black"}}>
             <div>
-                <h3>{props.name}</h3>
-                <div>{props.description}</div>
+                <h3>{props.name}</h3>               
                 <div>{price}</div>
             </div>
             <div>
                 <ProductsItemForm onAddToCart={addToCartHandler} />
             </div>
         </li>
+        </ProductsCard>
 
     )
 }
