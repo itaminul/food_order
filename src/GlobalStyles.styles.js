@@ -36,7 +36,7 @@ export default GlobalStyles;
 
 export const Container = styled.div`
 margin: 0 auto;
-padding: 0 50px;
+padding: 0 0px;
 max-width: 1300px;
 width: 100%;
 

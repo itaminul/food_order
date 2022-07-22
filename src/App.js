@@ -1,19 +1,17 @@
-import { Wrapper } from "./App.style";
 import TopNav from "./compnents/Template/TopNav";
 import LeftSideBar from "./compnents/Template/LeftSideBar";
-import Footer from "./compnents/Template/Footer";
+import Home from "./compnents/Profile/Home";
 
-import { TopNavBarContainer } from "./compnents/Template/TopNav.style";
-import { LeftSideBarContainer } from "./compnents/Template/LeftSideBar.style";
-import { FooterContainer } from "./compnents/Template/Footer.syle";
-import GlobalStyles from "./GlobalStyles.styles";
+import './index.css'
 function App() {
   return (
-    <Wrapper>
-      <GlobalStyles/>
+     <div>
          <TopNav />
-    </Wrapper>
+         <LeftSideBar />
+     </div>
   );
 }
 
 export default App;
+
+//https://css-tricks.com/hamburger-menu-with-a-side-of-react-hooks-and-styled-components/#top-of-site

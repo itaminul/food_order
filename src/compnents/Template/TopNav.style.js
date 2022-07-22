@@ -1,8 +1,49 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+
+export const Nav = styled.div`
+width: 100%;
+height: 65px;
+  background-color: #3D3D3D;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* show on larger screens */
+  @media screen and (min-width: 600px) {
+    display: block;
+  }
+  `
+
 
 export const TopNavBarContainer = styled.div`
 
 
+`
+
+export const StyledMenu = styled.div`
+position: fixex;
+top: 0;
+right: 0;
+height: 100vh;
+width: 100%;
+@media screen and (min-width: 790px) {
+  width: 60%;
+}
+background-color: rgba(255, 255, 255,.95);
+z-index: 99;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+`
+
+export const StyledLink = styled(Link)`
+color: #222;
+text-decoration: none;
+font-size: clamp(3rem, 4vw, 6vw);
+font-family: Impact, Haettenschweiler, 'Arial Nawwow Bold';
+user-select: none;
 `
 
 export const Navigations = styled.div`
