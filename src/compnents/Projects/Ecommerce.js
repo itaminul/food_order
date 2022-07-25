@@ -1,11 +1,9 @@
 import { Fragment, useState } from "react";
-import Header  from "./compnents/Layout/Header";
-import { CartBox,CartBoxSticky, ShopingBagBox, ItemCount, DollorCount } from "./compnents/Layout/Header.style";
-import shopingBag from './assets/shoping_bag.jpg'
-import Products from "./compnents/Products/Products";
-import Cart from "./compnents/Cart/Cart";
-import CartProvider from "./store/CartProvider";
-import ShowCartButton from "./compnents/Cart/ShowCartButton";
+import Header from "../Layout/Header";
+import Products from "../Products/Products";
+import Cart from "../Cart/Cart";
+import CartProvider from "../../store/CartProvider";
+import ShowCartButton from "../Cart/ShowCartButton";
 
 function Ecommerce() {
 

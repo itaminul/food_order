@@ -36,10 +36,6 @@ const Cart = (props) => {
                 <span>Total Amount </span>
                 <span>{totalAmount}</span>
             </CartTotalAmont>
-            <CartButton>
-                <button onClick={props.onClose}>Close</button>
-                {hasItem && <button>Order</button>}
-            </CartButton>
             </CardWra>
         </Modal>
         

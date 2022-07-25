@@ -15,7 +15,7 @@ console.log(portalElement)
         className="btn btn-primary mb-4"
         onClick={() => setShow(true)}
       >
-        Open Modal
+        {/* Open Modal */}
       </button>
       <AModal
         show={show}
@@ -23,7 +23,9 @@ console.log(portalElement)
         renderBackdrop={renderBackdrop}
       >
         <div>
-          <h4 id="modal-label">SHOPPING CART</h4>
+          <p id="modal-label">SHOPPING CART
+          <button style={{marginLeft: '40%', color: 'bg-indigo-800'}} onClick={props.onClose}>Close</button>
+          </p>
           <p>{props.children}</p>
         </div>
       </AModal>

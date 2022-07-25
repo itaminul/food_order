@@ -43,11 +43,14 @@ const AvailableProducts = () => {
         price={product.price}
         />)
     return (
-        <CardWra>
-            <ul>
-                {productsList}
-            </ul>
-        </CardWra>
+        <>
+        <div class="max-w-full bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+        <ul class="max-w-7xl text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+        <li class="max-w-7xl py-2 px-4 w-96 rounded-t-lg border-b border-gray-200 dark:border-gray-600">{productsList}</li>
+        
+        </ul>
+       </div>
+        </>
 
     );
 }

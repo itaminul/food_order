@@ -6,12 +6,12 @@ const Products = () => {
     return(
         <Fragment>         
           
-            <ProductsSummaryContent>
+            {/* <ProductsSummaryContent>
               <ProductsSummary />
-            </ProductsSummaryContent>
-            <AvailableProductsDetails>
-              <AvailableProducts />
-            </AvailableProductsDetails>
+            </ProductsSummaryContent> */}
+             <div class="p-2 w-full bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+             <AvailableProducts />
+              </div>
             
         </Fragment>      
 

@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import {  Routes, Route, Link, useLocation } from "react-router-dom";
 import Home from "../Profile/Home";
 import AboutUs from "../Profile/AboutUs";
+import Skills from "../Profile/Skills";
+import Blog from "../Profile/Blog";
+import Projects from "../Profile/Projects";
+import Ecommerce from "../Projects/Ecommerce";
+import MoviesList from "../Movies/MoviesApp";
 const LeftSideBar = () => {
   const location = useLocation();
   const [ showDrodownMenu, setShowDropdownMenu] = useState(true);
@@ -14,10 +19,9 @@ const LeftSideBar = () => {
     return (
      
       <>
-      <div>
-        <div class="grid grid-cols-5 gap-4">
-          <div>
-            <aside class="w-64" aria-label="Sidebar">
+<div class="flex flex-wrap">
+  <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4">
+  <aside className="w-64 hidden md:block" aria-label="Sidebar">
               <div class="overflow-y-auto py-4 px-3 bg-gray-50 rounded dark:bg-gray-800">
                 <ul class="space-y-2" onClick={refreshPage}>
                 <li>
@@ -27,7 +31,7 @@ const LeftSideBar = () => {
                   </li>
                   <li>
                     <Link to="/aboutus" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                      <span class="ml-3">About Us</span>
+                      <span class="ml-3">About Me</span>
                     </Link>
                   </li>
                   {/* <li>
@@ -67,10 +71,10 @@ const LeftSideBar = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                    <Link to="/skills" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
 
                       <span class="flex-1 ml-3 whitespace-nowrap">Skills</span>
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
@@ -93,20 +97,33 @@ const LeftSideBar = () => {
                 </ul>
               </div>
             </aside>
+    </div>
+  <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-5/6 mb-4">
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/aboutus" element={<AboutUs />} />
+            <Route exact path="/skills" element={<Skills />} />
+            <Route exact path="/blog" element={<Blog />} />
+            <Route exact path="/projects" element={<Projects />} />
+            <Route exact path="/movies" element={<MoviesList />} />
+          </Routes>
+  </div>
+</div>
 
-          </div>
-
-          <div className="flex w-96">
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/aboutus" element={<AboutUs />} />
-        </Routes>
 
 
-          </div>
-        </div>
+      <div class="flex ...">
+      <div class="w-1/6 ... ">
+      
 
       </div>
+
+        <div class="w-5/6 ...">
+       
+
+        </div>
+    </div>
+      
         </>
 
     )

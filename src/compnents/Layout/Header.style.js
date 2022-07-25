@@ -42,12 +42,6 @@ export const ShopingBagBox = styled.div`
 width: 20px;
   height: 20px;
 `
-export const ItemCount = styled.div`
-  font-size: 16px;
-  width: 150px;
-  margin-top: 4px;
-  color: yellow;
-`
 export const DollorCount = styled.div`
   font-size: 16px;
   width: 78px;
@@ -68,4 +62,25 @@ width: 110%;
 height: 100%;
 object-fit: cover;
 transform: rotateZ(-5deg) translateY(-4rem) translateZ(-1rem);
+`
+
+
+export const ShowCartBox = styled.div`
+margin-left: 78%;
+position: fixed;
+opacity: .85;
+margin-top: 20%;
+width: 80px;
+height: 50px;
+animation: push ease 5s alternate infinite;
+animation-delay: 1.5s;
+background-color: #55584d;
+`
+
+export const ItemCount = styled.div`
+  font-size: 16px;
+  width: 100px;
+  margin-top: 4px;
+  color: yellow;
+  padding: 8px;
 `

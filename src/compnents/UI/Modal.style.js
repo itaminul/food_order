@@ -30,12 +30,12 @@ export const Backdrop = styled.div`
 export const AModal = styled.div`
   position: fixed;
   z-index: 1040;
-  top: 20px;
-  left: 30px;
+  top: 0px;
+  left: 77%;
   border: 1px solid #e5e5e5;
   background-color: white;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  padding: 20px;
+  padding: 10px;
 `;
 
 export const ModalContent = styled.div`

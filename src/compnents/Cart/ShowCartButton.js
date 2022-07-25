@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CartBox, CartBoxSticky, ItemCount} from "../Layout/Header.style";
+import { CartBox, CartBoxSticky, ItemCount, ShowCartBox} from "../Layout/Header.style";
 import CartContext from "../../store/cart-context";
 const ShowCartButton = props => {
   const cartCtx = useContext(CartContext);
@@ -9,16 +9,18 @@ const ShowCartButton = props => {
     return (
                   
             <div>
-                <CartBox onClick={props.onShowCart}>
+              <ShowCartBox>
+                <ItemCount>
+              <span onClick={props.onShowCart}>{numberOfCartItems} ITEM</span>
+              </ItemCount>
+              </ShowCartBox>
+                {/* <CartBox onClick={props.onShowCart}>
                     <CartBoxSticky>                    
                       <ItemCount>
                         {numberOfCartItems} ITEM
                       </ItemCount>
-                      {/* <DollorCount>
-                        $ 150
-                        </DollorCount> */}
                     </CartBoxSticky>
-                  </CartBox>
+                  </CartBox> */}
 
             </div>
     )

@@ -1,9 +1,11 @@
 import React, {useState} from "react";
 import {  Routes, Route, Link, useLocation } from "react-router-dom";
+import Ecommerce from "../Projects/Ecommerce";
 const TopNav = () => {
     const [navbar, setNavbar] = useState(false);
 
     return (
+        <div>
         <nav className="w-full bg-slate-500 text-white  shadow">
             <div className="justify-between  px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                 <div>
@@ -60,19 +62,38 @@ const TopNav = () => {
                                 <a href="javascript:void(0)">Home</a>
                             </li>
                             <li className="text-white">
-                                <Link to="/aboutus">About Us</Link>
+                                <Link to="/aboutus">About Me</Link>
                             </li>
-                            <li className="text-white">
-                                <a href="javascript:void(0)">Blog</a>
+                            <li>
+                            <span class="group relative inline-block">
+                                <li class="text-white">
+                                    Projects
+                                    </li>
+                                <ul class="absolute hidden pt-1 text-gray-700 group-hover:block">
+                                <li>
+                                <Link className="whitespace-no-wrap block rounded-t bg-gray-200 py-2 px-4 hover:bg-gray-400" to="/projects">Ecommerce</Link>                                    
+                                </li>
+                                <li>
+                                <Link className="whitespace-no-wrap block rounded-t bg-gray-200 py-2 px-4 hover:bg-gray-400" to="/movies">Movie</Link>                                    
+                                </li>                               
+                                </ul>
+                            </span>
                             </li>
-                            <li className="text-white">
-                                <a href="javascript:void(0)">Contact US</a>
-                            </li>
+                            <li>
+                                <Link className="text-white" to="/movies">Blogs</Link>                                    
+                            </li>                           
+                          
                         </ul>
+                       
                     </div>
                 </div>
             </div>
         </nav>
+        {/* <Routes>
+          <Route exact path="/projects" element={<Ecommerce />} />
+        </Routes> */}
+       
+        </div>
     );
 
 }
