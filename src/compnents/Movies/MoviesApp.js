@@ -5,12 +5,19 @@ import LoadingSpieer from "../UI/LoadingSpinner";
 const MoviesApp = () => {
     const [movies, setMovies] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
+    const [ error, setError] = useState(null);
     async function fetchMoviesHandler() {
         setIsLoading(true);
-        const response = await fetch('https://swapi.dev/api/films/')
+        setError(null);
+        try {
+            const response = await fetch('https://swapi.dev/api/films2/')
+
+            if(!response.ok) {
+                throw new Error('Something went wrong!');
+            }    
+
             const data = await response.json();
-            setIsLoading(false);      
-        
+
             const transformedMovies = data.results.map(movieData => {
                 return {
                     id: movieData.episode_id,
@@ -19,19 +26,35 @@ const MoviesApp = () => {
                     releaseDate: movieData.release_date,
                 }
             })
-            setMovies(transformedMovies);
-            setIsLoading(false);
+            setMovies(transformedMovies);                     
+        } catch (error) {
+            setError(error.message);            
+        }
+        setIsLoading(false);  
+    }
 
-        
+    let content = <p className="text-5xl ml-64 text-blue-400">Information Not Found</p>;
+
+    if(movies.length > 0) {
+        content =    <MoviesList movies={movies} />;
+
+    }
+
+    if(error) {
+        content = <p className="text-5xl ml-64 text-red-500">{error}</p>;
+    }
+
+    if(isLoading) {
+        content = <LoadingSpieer />;
     }
     return(      
         <div>
            
         <div class="flex flex-wrap p-5 bg-blue-50">
-          <div class="flex w-full bg-white drop-shadow-md rounded-lg p-8  justify-center">   
-            <div class="flex flex-col px-5 py-1">
-                <button onClick={fetchMoviesHandler} className="mt-1 flex-1 font-light text-lg text-slate-500">
-                    Fetch Movies</button>
+          <div class="flex w-full bg-white  rounded-lg p-8  justify-center">   
+            <div class="flex flex-col px-5 py-1 text-3xl">
+                <button onClick={fetchMoviesHandler}>
+                    Fetch Movies Information</button>
                 </div>
          
            </div>
@@ -40,8 +63,7 @@ const MoviesApp = () => {
             <div className="flex w-full bg-white rounded-lg p-8 justify-cener">
                 <div className="flex flex-col px-5 py-1">
                 <p className="mt-1 flex-1 font-light text-lg text-slate-500">
-                {isLoading ? <LoadingSpieer /> : null }
-                    <MoviesList movies={movies} />
+               {content}
                     </p>
                 </div>
             </div>
