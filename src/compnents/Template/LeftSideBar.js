@@ -5,8 +5,10 @@ import AboutUs from "../Profile/AboutUs";
 import Skills from "../Profile/Skills";
 import Blog from "../Profile/Blog";
 import Projects from "../Profile/Projects";
-import Ecommerce from "../Projects/Ecommerce";
 import MoviesList from "../Movies/MoviesApp";
+import BasicForm from "../Forms/BasicForm";
+import SimpleInput from "../Forms/SimpleInput";
+
 const LeftSideBar = () => {
   const location = useLocation();
   const [ showDrodownMenu, setShowDropdownMenu] = useState(true);
@@ -106,6 +108,7 @@ const LeftSideBar = () => {
             <Route exact path="/blog" element={<Blog />} />
             <Route exact path="/projects" element={<Projects />} />
             <Route exact path="/movies" element={<MoviesList />} />
+            <Route exact path="/inputForms" element={<SimpleInput />} />
           </Routes>
   </div>
 </div>

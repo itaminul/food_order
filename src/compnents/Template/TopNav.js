@@ -75,7 +75,10 @@ const TopNav = () => {
                                 </li>
                                 <li>
                                 <Link className="whitespace-no-wrap block rounded-t bg-gray-200 py-2 px-4 hover:bg-gray-400" to="/movies">Movie</Link>                                    
-                                </li>                               
+                                </li>  
+                                <li>
+                                <Link className="whitespace-no-wrap block rounded-t bg-gray-200 py-2 px-4 hover:bg-gray-400" to="/inputForms">Form</Link>                                    
+                                </li>                                 
                                 </ul>
                             </span>
                             </li>

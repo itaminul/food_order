@@ -33,7 +33,7 @@ const MoviesApp = () => {
         setIsLoading(false);  
     }
 
-    let content = <p className="text-5xl ml-64 text-blue-400">Information Not Found</p>;
+    let content = <p className="text-5xl ml-64 md:text-center text-blue-400">Information Not Found</p>;
 
     if(movies.length > 0) {
         content =    <MoviesList movies={movies} />;
