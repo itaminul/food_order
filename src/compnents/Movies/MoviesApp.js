@@ -10,7 +10,7 @@ const MoviesApp = () => {
         setIsLoading(true);
         setError(null);
         try {
-            const response = await fetch('https://swapi.dev/api/films2/')
+            const response = await fetch('https://swapi.dev/api/films/')
 
             if(!response.ok) {
                 throw new Error('Something went wrong!');

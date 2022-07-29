@@ -8,6 +8,7 @@ import Projects from "../Profile/Projects";
 import MoviesList from "../Movies/MoviesApp";
 import BasicForm from "../Forms/BasicForm";
 import SimpleInput from "../Forms/SimpleInput";
+import Todoapp from "../Todoapp/Index";
 
 const LeftSideBar = () => {
   const location = useLocation();
@@ -109,6 +110,8 @@ const LeftSideBar = () => {
             <Route exact path="/projects" element={<Projects />} />
             <Route exact path="/movies" element={<MoviesList />} />
             <Route exact path="/inputForms" element={<SimpleInput />} />
+            <Route exact path="/todoapp" element={<Todoapp />} />
+            
           </Routes>
   </div>
 </div>
