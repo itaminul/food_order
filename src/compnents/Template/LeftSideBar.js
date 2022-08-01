@@ -9,6 +9,8 @@ import MoviesList from "../Movies/MoviesApp";
 import BasicForm from "../Forms/BasicForm";
 import SimpleInput from "../Forms/SimpleInput";
 import Todoapp from "../Todoapp/Index";
+import HomeCrud from "../crud/Home";
+import CreateCrude from "../crud/Create";
 
 const LeftSideBar = () => {
   const location = useLocation();
@@ -111,6 +113,9 @@ const LeftSideBar = () => {
             <Route exact path="/movies" element={<MoviesList />} />
             <Route exact path="/inputForms" element={<SimpleInput />} />
             <Route exact path="/todoapp" element={<Todoapp />} />
+            <Route exact path="/crud" element={<HomeCrud />} />
+            <Route exact path="/createCrude" element={<CreateCrude />} />
+            
             
           </Routes>
   </div>
