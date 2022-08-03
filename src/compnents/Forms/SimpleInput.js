@@ -1,5 +1,4 @@
-import { isValidInputTimeValue } from "@testing-library/user-event/dist/utils";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import './SimpleInput.css'
 const SimpleInput = () => {
     const [enteredName, setEnteredName] = useState('');

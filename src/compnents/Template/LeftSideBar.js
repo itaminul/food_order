@@ -114,7 +114,7 @@ const LeftSideBar = () => {
             <Route exact path="/inputForms" element={<SimpleInput />} />
             <Route exact path="/todoapp" element={<Todoapp />} />
             <Route exact path="/crud" element={<HomeCrud />} />
-            <Route exact path="/createCrude" element={<CreateCrude />} />
+            <Route exact path="/createCrud" element={<CreateCrude />} />
             
             
           </Routes>

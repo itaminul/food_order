@@ -4,30 +4,45 @@ import array from "./array";
 import {  Routes, Route, Link, useNavigate } from "react-router-dom";
 const Home = () => {
     let history = useNavigate();
-    function setID(id,name,age){
-        localStorage.setItem('id', id);
-        localStorage.setItem('Name', name);
-        localStorage.setItem('Age', age);
-      }
-    
 
      
     return(
-        <>
-       
-          {/* {console.log(array.Name)} */}
-          {array.map((itemName) => {
-              <div className="mb-6 mt-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                  {itemName.Name}dddddddddddffffffffffffffff
-                  </div>
-             
-              
-          })}
-
-        
-        </>
+      <div>
+         <div className="mt-10">
+              <Link className="d-grid gap-2" to='/createCrud'>
+                <button variant="warning" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" size="lg">Create</button>
+              </Link>
+          </div>
+        <table className="table-fiexed mt-10 w-full">
+          <thead>
+            <tr>
+              <th className="border px-8 py-4">SL</th>
+              <th className="border px-8 py-4">Name</th>
+              <th className="border px-8 py-4">Age</th>
+              <th className="border px-8 py-4">Eamil</th>
+              <th className="border px-8 py-4">Nationality</th>
+              <th className="border px-8 py-4">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+              {array.map(name => 
+              <tr>
+                <td className="border px-8 py-4">{name.id}</td>
+                <td className="border px-8 py-4">{name.Name}</td>
+                <td className="border px-8 py-4">{name.Age}</td>
+                <td className="border px-8 py-4">{name.Email}</td>               
+                <td className="border px-8 py-4">{name.Nationality}</td>               
+                <td className="border px-8 py-4">{name.Status}</td>              
+                </tr>
+                )}
+            </tbody>
+          </table>        
+     
+      	</div>
     )
 
 }
 
 export default Home;
+
+//https://www.geeksforgeeks.org/how-to-do-crud-operations-in-reactjs/#:~:text=CRUD%20stands%20for%20Create%2C%20Read,JavaScript%20libraries%20for%20frontend%20development.

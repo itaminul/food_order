@@ -13,3 +13,6 @@ function App() {
 export default App;
 
 //https://css-tricks.com/hamburger-menu-with-a-side-of-react-hooks-and-styled-components/#top-of-site
+
+//validation
+//https://www.pluralsight.com/guides/handling-multiple-inputs-with-single-onchange-handler-react
