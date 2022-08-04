@@ -11,6 +11,8 @@ import SimpleInput from "../Forms/SimpleInput";
 import Todoapp from "../Todoapp/Index";
 import HomeCrud from "../crud/Home";
 import CreateCrude from "../crud/Create";
+import BlogIndex from "../Blogs/BlogIndex";
+import VariableDetailScope from "../Blogs/Javascript/VariableDetailScope";
 
 const LeftSideBar = () => {
   const location = useLocation();
@@ -115,6 +117,8 @@ const LeftSideBar = () => {
             <Route exact path="/todoapp" element={<Todoapp />} />
             <Route exact path="/crud" element={<HomeCrud />} />
             <Route exact path="/createCrud" element={<CreateCrude />} />
+            <Route exact path="/blogs" element={<BlogIndex />} />
+            <Route exact path="/variableDetailScope" element={ <VariableDetailScope /> } />
             
             
           </Routes>

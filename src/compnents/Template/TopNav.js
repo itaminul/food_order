@@ -61,8 +61,16 @@ const TopNav = () => {
                             <li className="text-white">
                                 <a href="javascript:void(0)">Home</a>
                             </li>
-                            <li className="text-white">
-                                <Link to="/aboutus">About Me</Link>
+                            <li>
+                            <span class="group relative inline-block">
+                                <li class="text-white">Blogs</li>
+                                <ul class="absolute hidden pt-1 text-gray-700 group-hover:block">
+                                <li>
+                                <Link className="whitespace-no-wrap block rounded-t bg-gray-200 py-2 px-4 hover:bg-gray-400" to="/blogs">JavaScript
+                                </Link>                                     
+                                </li>
+                                </ul>
+                            </span>
                             </li>
                             <li>
                             <span class="group relative inline-block">
@@ -87,10 +95,11 @@ const TopNav = () => {
                                 </li>   
                                 </ul>
                             </span>
-                            </li>
-                            <li>
-                                <Link className="text-white" to="/movies">Blogs</Link>                                    
-                            </li>                          
+                            </li>     
+                            
+                            <li className="text-white">
+                                <Link to="/aboutus">About Me</Link>
+                            </li>                   
                           
                         </ul>
                        
