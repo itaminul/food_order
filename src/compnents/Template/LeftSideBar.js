@@ -16,6 +16,7 @@ import VariableDetailScope from "../Blogs/Javascript/VariableDetailScope";
 import JavascriptObject from "../Blogs/Javascript/JavascriptObject";
 import JavascriptArray from "../Blogs/Javascript/JavascriptArray";
 import ProfilePic from '../../assets/images/profle2.jpg'
+import AddUser from "../Users/AddUser";
 const LeftSideBar = () => {
   const location = useLocation();
   const [ showDrodownMenu, setShowDropdownMenu] = useState(true);
@@ -108,7 +109,10 @@ const LeftSideBar = () => {
                   <li>
                     <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
 
-                      <span class="flex-1 ml-3 whitespace-nowrap">Sign Up</span>
+                      <span class="flex-1 ml-3 whitespace-nowrap">
+                        <Link to="/adduser">Sign Up</Link>
+                        
+                        </span>
                     </a>
                   </li>
                 </ul>
@@ -131,6 +135,7 @@ const LeftSideBar = () => {
             <Route exact path="/variableDetailScope" element={ <VariableDetailScope /> } />
             <Route exatc path="/JavascriptObject"  element={ <JavascriptObject /> } />
             <Route exatc path="/javascriptarray"  element={ <JavascriptArray /> } />
+            <Route exatc path="/adduser"  element={ <AddUser /> } />
             
             
             
