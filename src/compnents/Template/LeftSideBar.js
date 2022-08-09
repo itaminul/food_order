@@ -18,9 +18,11 @@ import JavascriptArray from "../Blogs/Javascript/JavascriptArray";
 import ProfilePic from '../../assets/images/profle2.jpg'
 import AddUser from "../Users/UserIndex";
 import LoginIndex from "../Login/LoginIndex";
-
+import Login from "../Login/Login";
+import ContextApp from "../ContextApi/ContextApp";
+import { ColorContext } from "../Contextapitwo/ColorContext";
 // import Index from '../Context/ContextIndex'
-import ContextIndex from '../Context/ContextIndex'
+import ContextApiTwo from "../Contextapitwo/ContextApiTwo";
 
 const LeftSideBar = () => {
   const location = useLocation();
@@ -35,16 +37,13 @@ const LeftSideBar = () => {
      
       <>
 <div class="flex flex-wrap">
-
   <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4">
   <aside className="w-64 hidden md:block" aria-label="Sidebar">
-
           <div class="flex flex-wrap ml-10">
           <div class="relative w-96 h-36">
             <img src={ProfilePic} alt="..." className="rounded-full border-4 border-white dark:border-gray-800 dark:outline-gray-800 w-36 " />
           </div>
         </div>
-
               <div class="overflow-y-auto py-4 px-3 bg-gray-50 rounded dark:bg-gray-800">
                 <ul class="space-y-2" onClick={refreshPage}>
                 <li>
@@ -88,46 +87,25 @@ const LeftSideBar = () => {
                   </li>
                   <li>
                     <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-
                       <span class="flex-1 ml-3 whitespace-nowrap">Education</span>
 
                     </a>
                   </li>
                   <li>
                     <Link to="/skills" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-
                       <span class="flex-1 ml-3 whitespace-nowrap">Skills</span>
                     </Link>
                   </li>
                   <li>
                     <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-
                       <span class="flex-1 ml-3 whitespace-nowrap">Contact</span>
                     </a>
                   </li>
+                
                   <li>
                     <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-
                       <span class="flex-1 ml-3 whitespace-nowrap">
-                        <Link to="/login">Sign In</Link>
-                        </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-
-                      <span class="flex-1 ml-3 whitespace-nowrap">
-                        <Link to="/adduser">Sign Up</Link>
-                        
-                        </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-
-                      <span class="flex-1 ml-3 whitespace-nowrap">
-                        <Link to="/context1">Context 1</Link>
-                        
+                        <Link to="/adduser">Sign Up</Link>                        
                         </span>
                     </a>
                   </li>
@@ -152,11 +130,8 @@ const LeftSideBar = () => {
             <Route exatc path="/JavascriptObject"  element={ <JavascriptObject /> } />
             <Route exatc path="/javascriptarray"  element={ <JavascriptArray /> } />
             <Route exatc path="/adduser"  element={ <AddUser /> } />
-            <Route exatc path="/login"  element={ <LoginIndex /> } />
-            <Route exatc path="/context1"  element={ <ContextIndex /> } />
-            
-            
-            
+            <Route exatc path="/userlogin"  element={ <Login /> } />  
+            <Route exatc path="/contextapi"  element={ <ContextApp /> } />              
           </Routes>
   </div>
 </div>
