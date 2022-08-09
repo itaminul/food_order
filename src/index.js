@@ -5,12 +5,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css'
+import { AppProvider } from './Context/appContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <AppProvider>
     <Router>
     <App />
     </Router>
+    </AppProvider>
   </React.StrictMode>
 );
 

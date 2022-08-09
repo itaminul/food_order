@@ -1,7 +1,5 @@
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import Header  from "./compnents/Layout/Header";
-import { CartBox,CartBoxSticky, ShopingBagBox, ItemCount, DollorCount } from "./compnents/Layout/Header.style";
-import shopingBag from './assets/shoping_bag.jpg'
 import Products from "./compnents/Products/Products";
 import Cart from "./compnents/Cart/Cart";
 import CartProvider from "./store/CartProvider";

@@ -1,6 +1,7 @@
 import TopNav from "./compnents/Template/TopNav";
 import LeftSideBar from "./compnents/Template/LeftSideBar";
 import './index.css'
+import LoginIndex from "./compnents/Login/LoginIndex";
 function App() {
   return (
      <div>

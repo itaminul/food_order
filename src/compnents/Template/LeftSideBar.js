@@ -16,7 +16,12 @@ import VariableDetailScope from "../Blogs/Javascript/VariableDetailScope";
 import JavascriptObject from "../Blogs/Javascript/JavascriptObject";
 import JavascriptArray from "../Blogs/Javascript/JavascriptArray";
 import ProfilePic from '../../assets/images/profle2.jpg'
-import AddUser from "../Users/AddUser";
+import AddUser from "../Users/UserIndex";
+import LoginIndex from "../Login/LoginIndex";
+
+// import Index from '../Context/ContextIndex'
+import ContextIndex from '../Context/ContextIndex'
+
 const LeftSideBar = () => {
   const location = useLocation();
   const [ showDrodownMenu, setShowDropdownMenu] = useState(true);
@@ -103,7 +108,9 @@ const LeftSideBar = () => {
                   <li>
                     <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
 
-                      <span class="flex-1 ml-3 whitespace-nowrap">Sign In</span>
+                      <span class="flex-1 ml-3 whitespace-nowrap">
+                        <Link to="/login">Sign In</Link>
+                        </span>
                     </a>
                   </li>
                   <li>
@@ -111,6 +118,15 @@ const LeftSideBar = () => {
 
                       <span class="flex-1 ml-3 whitespace-nowrap">
                         <Link to="/adduser">Sign Up</Link>
+                        
+                        </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+
+                      <span class="flex-1 ml-3 whitespace-nowrap">
+                        <Link to="/context1">Context 1</Link>
                         
                         </span>
                     </a>
@@ -136,6 +152,8 @@ const LeftSideBar = () => {
             <Route exatc path="/JavascriptObject"  element={ <JavascriptObject /> } />
             <Route exatc path="/javascriptarray"  element={ <JavascriptArray /> } />
             <Route exatc path="/adduser"  element={ <AddUser /> } />
+            <Route exatc path="/login"  element={ <LoginIndex /> } />
+            <Route exatc path="/context1"  element={ <ContextIndex /> } />
             
             
             
