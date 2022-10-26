@@ -1,13 +1,11 @@
 import TopNav from "./compnents/Template/TopNav";
 import LeftSideBar from "./compnents/Template/LeftSideBar";
 import './index.css'
-import Login from "./compnents/Login/Login";
 function App() {
   return (
      <div>
          <TopNav />
-         <LeftSideBar />
-         
+         <LeftSideBar />        
          
      </div>
   );

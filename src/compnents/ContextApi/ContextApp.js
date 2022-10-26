@@ -6,8 +6,7 @@ class ContextApp extends React.Component {
         return (
             <MyProvider>
                 <div className="App">
-                    <header className="App-header">
-                       
+                    <header className="App-header">                       
                         <h1 className="App-title">Welcome to my web store</h1>
                     </header>
                     <ProductList />

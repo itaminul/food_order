@@ -1,8 +1,4 @@
 import React, { Component } from 'react'
-
-import ComponentC from './ComponentC'
-
-import { UserProvider } from './userContext'
 import ExampleContext from './ExampleContext'
 import Middleman from './Middleman'
 class IndexContext extends Component {

@@ -15,9 +15,7 @@ const MoviesApp = () => {
             if(!response.ok) {
                 throw new Error('Something went wrong!');
             }    
-
             const data = await response.json();
-
             const transformedMovies = data.results.map(movieData => {
                 return {
                     id: movieData.episode_id,
@@ -34,29 +32,24 @@ const MoviesApp = () => {
     }
 
     let content = <p className="text-5xl ml-64 md:text-center text-blue-400">Information Not Found</p>;
-
     if(movies.length > 0) {
         content =    <MoviesList movies={movies} />;
-
     }
-
     if(error) {
         content = <p className="text-5xl ml-64 text-red-500">{error}</p>;
     }
-
     if(isLoading) {
         content = <LoadingSpieer />;
     }
     return(      
-        <div>
-           
+        <div>           
         <div class="flex flex-wrap p-5 bg-blue-50">
           <div class="flex w-full bg-white  rounded-lg p-8  justify-center">   
             <div class="flex flex-col px-5 py-1 text-3xl">
-                <button onClick={fetchMoviesHandler}>
+                <button onClick={fetchMoviesHandler}
+                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                     Fetch Movies Information</button>
-                </div>
-         
+                </div>         
            </div>
         </div>
         <div className="flex flex-wrap p5 bg-blue-50">
@@ -68,9 +61,7 @@ const MoviesApp = () => {
                 </div>
             </div>
         </div>
-
-        </div>  
-    
+        </div>      
     )
 
 }
